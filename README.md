@@ -1,5 +1,5 @@
 # Currency Converter
-A React Native mobile app based on a currency conversion at the tip of your fingers. Allows users to get real time conversions of global currencies.
+A React Native mobile app based on currency conversion. Allows users to get real time conversions of global currencies.
 
 ## Personal Learning
 To get acquainted further with React Native as I transition my learning from ReactJS. Also applying the Redux methodology with React Native for the first time.
