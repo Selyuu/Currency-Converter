@@ -21,6 +21,9 @@
     "lint": "eslint app/",
     "lint:fix": "eslint app/ --fix"
   },
+	"rnpm": {
+		"assets": ["./assets/fonts"]
+	},
   "jest": {
     "preset": "jest-expo"
   },
