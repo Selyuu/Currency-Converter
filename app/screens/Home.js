@@ -20,6 +20,10 @@ export default class Home extends Component {
 		console.log('quote');
 	}
 
+	handleTextChange = (text) => {
+		console.log('new text!', text);
+	}
+
 	// RENDER ===========================
 
 	render() {
@@ -30,10 +34,14 @@ export default class Home extends Component {
 				<InputWithButton
 					buttonText={TEMP_BASE}
 					onPress={this.pressBase}
+					defaultValue={BASE_PRICE}
+					keyboardType='numeric'
+					onChangeText={this.handleTextChange}
 				/>
 				<InputWithButton
 					buttonText={TEMP_QUOTE}
 					onPress={this.pressQuote}
+					defaultValue={QUOTE_PRICE}
 					editable={false}
 				/>
 			</Container>
