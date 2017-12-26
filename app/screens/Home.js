@@ -34,7 +34,7 @@ export default class Home extends Component {
 	}
 
 	pressGear = () => {
-		console.log('gear pressed!');
+		console.log('option gear pressed!');
 	}
 
 	// RENDER ===========================
