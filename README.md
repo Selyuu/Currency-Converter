@@ -11,7 +11,7 @@ To get acquainted further with React Native as I transition my learning from Rea
 More to follow.
 
 ![Awww](https://i.imgur.com/pDrpY9q.png "Yeah")
-![Awww](https://i.imgur.com/mp2U5rE.png "Yeah")
+![Awww](https://i.imgur.com/TCXvv38.png "Yeah")
 
 ## Technology Stack
 - React Native
