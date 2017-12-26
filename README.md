@@ -8,9 +8,9 @@ To get acquainted further with React Native as I transition my learning from Rea
 *WIP*
 
 ## Screenshots
-2 screenshots (iPhone X Simulator) with basic functionality and mock home screen. More to follow.
+More to follow.
 
-![Awww](https://i.imgur.com/kZ16GzN.png "Yeah")
+![Awww](https://i.imgur.com/pDrpY9q.png "Yeah")
 ![Awww](https://i.imgur.com/mp2U5rE.png "Yeah")
 
 ## Technology Stack
