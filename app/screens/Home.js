@@ -4,6 +4,7 @@ import { View, StatusBar } from 'react-native';
 import { Container } from '../components/Container';
 import { Logo } from '../components/Logo';
 import { InputWithButton } from '../components/InputWithButton';
+import { ClearButton } from '../components/Buttons';
 
 const TEMP_BASE = 'GBP';
 const TEMP_QUOTE = 'EUR';
@@ -22,6 +23,10 @@ export default class Home extends Component {
 
 	handleTextChange = (text) => {
 		console.log('new text!', text);
+	}
+
+	handleSwap = () => {
+		console.log('swapping!');
 	}
 
 	// RENDER ===========================
@@ -43,6 +48,11 @@ export default class Home extends Component {
 					onPress={this.pressQuote}
 					defaultValue={QUOTE_PRICE}
 					editable={false}
+				/>
+
+				<ClearButton
+					text='REVERSE'
+					onPress={this.handleSwap}
 				/>
 			</Container>
 		)
