@@ -10,6 +10,8 @@ const TEMP_BASE = 'GBP';
 const TEMP_QUOTE = 'EUR';
 const BASE_PRICE = '100';
 const QUOTE_PRICE = '88.45';
+const TEMP_RATE = 0.8845;
+const TEMP_DATE = new Date();
 
 export default class Home extends Component {
 
