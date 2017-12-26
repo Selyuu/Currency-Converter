@@ -4,6 +4,7 @@ export default EStyleSheet.create({
 	text: {
 		color: '$white',
 		marginTop: 10,
-		fontSize: 11
+		fontSize: 11,
+		textAlign: 'center',
 	},
 });
