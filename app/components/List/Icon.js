@@ -10,7 +10,7 @@ const Icon = ({ checkmark, visible }) => {
 
 	return (
 		<View style={iconStyles}>
-			<Image style={styles.imageIcon} source={require('./img/check.png')} resizeMode='contain' />
+			{checkmark ? <Image style={styles.imageIcon} source={require('./img/check.png')} resizeMode='contain' /> : false}
 		</View>
 				);
 }
