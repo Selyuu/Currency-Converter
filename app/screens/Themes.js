@@ -7,12 +7,12 @@ import { ListItem, Separator } from '../components/List';
 const styles = EStyleSheet.create({
 	$blue: '$primaryBlue',
 	$green: '$primaryGreen',
-	$orange: '$primaryOrange'
+	$orange: '$primaryOrange',
 	$purple: '$primaryPurple',
 })
 
 export default class Themes extends Component {
-	handleThemePress = () => {
+	handleThemePress = (color) => {
 		console.log('theme color pressed');
 	}
 	render() {
@@ -21,30 +21,37 @@ export default class Themes extends Component {
 				<StatusBar translucent={false} barStyle='default'/>
 				<ListItem
 					text='Blue'
-					handleThemePress={this.handleThemePress}
+					onPress={() => this.handleThemePress(styles.$blue)}
 					selected
 					checkmark={false}
+					iconBackground={styles.$blue}
+
 				/>
 				<Separator />
 				<ListItem
 					text='Green'
-					handleThemePress={this.handleThemePress}
+					onPress={() => this.handleThemePress(styles.$green)}
 					selected
 					checkmark={false}
+					iconBackground={styles.$green}
+
 				/>
 				<Separator />
 				<ListItem
 					text='Purple'
-					handleThemePress={this.handleThemePress}
+					onPress={() => this.handleThemePress(styles.$purple)}
 					selected
 					checkmark={false}
+					iconBackground={styles.$purple}
+
 				/>
 				<Separator />
 				<ListItem
 					text='Orange'
-					handleThemePress={this.handleThemePress}
+					onPress={() => this.handleThemePress(styles.$orange)}
 					selected
 					checkmark={false}
+					iconBackground={styles.$orange}
 				/>
 				<Separator />
 			</ScrollView>
