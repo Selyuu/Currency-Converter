@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import styles from './styles';
 
 const ClearButton = ({text, onPress}) => (
-	<TouchableOpacity style={styles.container}>
+	<TouchableOpacity style={styles.container} onPress={onPress}>
 		<View style={styles.view}>
 			<Image resizeMode='contain' style={styles.icon} source={require('./img/icon.png')} />
 			<Text style={styles.text}>{text}</Text>
@@ -14,7 +14,7 @@ const ClearButton = ({text, onPress}) => (
 
 ClearButton.propTypes = {
 	text: PropTypes.string,
-	onPress: PropTypes.func
+	onPress: PropTypes.func,
 }
 
 export default ClearButton;
