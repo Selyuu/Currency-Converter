@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { ScrollView, StatusBar } from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
+import PropTypes from 'prop-types';
 
 import { ListItem, Separator } from '../components/List';
 
@@ -12,12 +13,18 @@ const styles = EStyleSheet.create({
 })
 
 export default class Themes extends Component {
-	handleThemePress = (color) => {
-		console.log('theme color pressed');
+
+	static propTypes = {
+		navigation: PropTypes.object,
 	}
+
+	handleThemePress = (color) => {
+		this.props.navigation.goBack(null);
+	}
+
 	render() {
 		return (
-			<ScrollView style={{marginTop: 40}}>
+			<ScrollView>
 				<StatusBar translucent={false} barStyle='default'/>
 				<ListItem
 					text='Blue'

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { FlatList, View, StatusBar } from 'react-native';
+import PropTypes from 'prop-types';
 
 import { ListItem, Separator } from '../components/List';
 import currencies from '../data/currencies';
@@ -8,13 +9,17 @@ const TEMP_CURRENCY = 'BRL';
 
 export default class CurrencyList extends Component {
 
+	static propTypes = {
+		navigation: PropTypes.object,
+	}
+
 	handlePress = () => {
-		console.log('row press');
+		this.props.navigation.goBack(null);
 	}
 
 	render() {
 		return (
-			<View style={{ flex: 1, marginTop: 50 }}>
+			<View style={{ flex: 1 }}>
 				<StatusBar translucent={false} barStyle='default' />
 				<FlatList
 					data={currencies}

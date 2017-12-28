@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ScrollView, StatusBar } from 'react-native';
+import { ScrollView, StatusBar, Linking } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
 import { ListItem, Separator } from '../components/List';
@@ -10,16 +10,16 @@ const ICON_SIZE = 23;
 export default class Options extends Component {
 
 	handleThemesPress = () => {
-		console.log('themes pressed');
+		this.props.navigation.navigate('Themes');
 	}
 
 	handleSitePress = () => {
-		console.log('sites pressed');
+		Linking.openURL('http://www.ray.codes').catch(err => console.log(err));
 	}
 
 	render() {
 		return (
-			<ScrollView style={{marginTop: 40}}>
+			<ScrollView>
 				<StatusBar translucent={false} barStyle='default' />
 				<ListItem
 					text='Themes'
