@@ -5,15 +5,24 @@ import PropTypes from 'prop-types';
 import { ListItem, Separator } from '../components/List';
 import currencies from '../data/currencies';
 
+// REDUX
+import { connect } from 'react-redux';
+import { changeBaseCurrency, changeQuoteCurrency } from '../actions/currencies';
+
 const TEMP_CURRENCY = 'BRL';
 
-export default class CurrencyList extends Component {
+class CurrencyList extends Component {
 
 	static propTypes = {
 		navigation: PropTypes.object,
+		dispatch: PropTypes.func,
 	}
 
-	handlePress = () => {
+	handlePress = (currency) => {
+		const { type } = this.props.navigation.state.params;
+		type === 'base' ?
+		this.props.dispatch(changeBaseCurrency(currency)) :
+		this.props.dispatch(changeQuoteCurrency(currency));
 		this.props.navigation.goBack(null);
 	}
 
@@ -27,7 +36,7 @@ export default class CurrencyList extends Component {
 						<ListItem
 							text={item}
 							selected={item === TEMP_CURRENCY}
-							onPress={this.handlePress}
+							onPress={() => this.handlePress(item)}
 						/>
 					)}
 					keyExtractor={item => item}
@@ -37,3 +46,5 @@ export default class CurrencyList extends Component {
 		)
 	}
 }
+
+export default connect()(CurrencyList);
