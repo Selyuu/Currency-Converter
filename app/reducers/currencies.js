@@ -7,6 +7,21 @@ const initialState = {
 	conversions: {},
 }
 
+const setConversions = (state, action) => {
+	let conversion = {
+		isFetching: true,
+		date: '',
+		rates: {},
+	}
+	state.conversions[action.currency] ?
+	conversion = state.conversions[action.currency] : false;
+
+	return {
+		...state.conversions,
+		[action.currency]: conversion,
+	}
+}
+
 const reducer = (state = initialState, action) => {
 	switch (action.type) {
 		case SWAP_CURRENCY:
@@ -24,7 +39,14 @@ const reducer = (state = initialState, action) => {
 		return {
 			...state,
 			baseCurrency: action.currency,
+			conversions: setConversions(state, action),
 		};
+		case CHANGE_QUOTE:
+		return {
+			...state,
+			quoteCurrency: action.currency,
+			conversions: setConversions(state, action),
+		}
 		default:
 		return state;
 	}
