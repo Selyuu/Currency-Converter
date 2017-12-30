@@ -9,6 +9,10 @@ import { ClearButton } from '../components/Buttons';
 import { LastConverted } from '../components/Text';
 import { Header } from '../components/Header';
 
+// Actions REDUX
+import { swapCurrency, changeCurrencyAmount } from '../actions/currencies';
+import { connect } from 'react-redux';
+
 const TEMP_BASE = 'GBP';
 const TEMP_QUOTE = 'EUR';
 const BASE_PRICE = '100';
@@ -16,10 +20,11 @@ const QUOTE_PRICE = '88.45';
 const TEMP_RATE = 0.8845;
 const TEMP_DATE = new Date();
 
-export default class Home extends Component {
+class Home extends Component {
 
 	static propTypes = {
 		navigation: PropTypes.object,
+		dispatch: PropTypes.func,
 	}
 
 	pressBase = () => {
@@ -31,11 +36,11 @@ export default class Home extends Component {
 	}
 
 	handleTextChange = (text) => {
-		console.log('new text!', text);
+		this.props.dispatch(changeCurrencyAmount(text));
 	}
 
 	handleSwap = () => {
-		console.log('swapping!');
+		this.props.dispatch(swapCurrency());
 	}
 
 	pressGear = () => {
@@ -82,3 +87,5 @@ export default class Home extends Component {
 		)
 	}
 }
+
+export default connect()(Home);
