@@ -43,6 +43,7 @@ class CurrencyList extends Component {
 							text={item}
 							selected={item === comparisonCurrency}
 							onPress={() => this.handlePress(item)}
+							iconBackground={this.props.primaryColor}
 						/>
 					)}
 					keyExtractor={item => item}

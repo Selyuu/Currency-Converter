@@ -32,7 +32,7 @@ export default EStyleSheet.create({
 		fontWeight: '600',
 		fontSize: 15,
 		paddingHorizontal: 16,
-		color: '$primaryBlue',
+		// color: '$primaryBlue',
 	},
 	input: {
 		height: INPUT_HEIGHT,
