@@ -16,6 +16,7 @@ class CurrencyList extends Component {
 		dispatch: PropTypes.func,
 		baseCurrency: PropTypes.string,
 		quoteCurrency: PropTypes.string,
+		primaryColor: PropTypes.string,
 	}
 
 	handlePress = (currency) => {
@@ -26,7 +27,7 @@ class CurrencyList extends Component {
 		this.props.navigation.goBack(null);
 	}
 
-
+// RENDER ========================
 
 	render() {
 		let comparisonCurrency = this.props.baseCurrency;
@@ -56,6 +57,7 @@ const mapStateToProps = state => {
 	return {
 		baseCurrency: state.currencies.baseCurrency,
 		quoteCurrency: state.currencies.quoteCurrency,
+		primaryColor: state.theme.primaryColor,
 	}
 }
 

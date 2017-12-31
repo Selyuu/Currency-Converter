@@ -24,6 +24,8 @@ class Options extends Component {
 		Linking.openURL('http://www.ray.codes').catch(() => this.props.alertWithType('error', 'Sorry!', 'Page cannot be opened right now'));
 	}
 
+// RENDER ========================
+
 	render() {
 		return (
 			<ScrollView>

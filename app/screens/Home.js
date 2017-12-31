@@ -46,7 +46,7 @@ class Home extends Component {
 		this.props.navigation.navigate('Options');
 	}
 
-	// RENDER ===========================
+// RENDER ========================
 
 	render() {
 
