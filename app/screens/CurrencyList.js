@@ -9,8 +9,6 @@ import currencies from '../data/currencies';
 import { connect } from 'react-redux';
 import { changeBaseCurrency, changeQuoteCurrency } from '../actions/currencies';
 
-const TEMP_CURRENCY = 'BRL';
-
 class CurrencyList extends Component {
 
 	static propTypes = {
