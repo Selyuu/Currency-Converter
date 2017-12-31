@@ -15,7 +15,6 @@ const InputWithButton = (props) => {
 	if (!editable) containerStyles.push(styles.containerDisabled);
 
 	const buttonStyles = [styles.buttonText];
-	console.log('hi', textColor);
 	if (textColor) buttonStyles.push({ color: textColor });
 
 	return (
