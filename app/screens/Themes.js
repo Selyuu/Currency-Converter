@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import { ListItem, Separator } from '../components/List';
 
 // REDUX
-import connect from 'react-redux';
+import { connect } from 'react-redux';
 import { changePrimaryColor } from '../actions/theme';
 
 const styles = EStyleSheet.create({
@@ -27,6 +27,8 @@ class Themes extends Component {
 		this.props.dispatch(changePrimaryColor(color));
 		this.props.navigation.goBack(null);
 	}
+
+// RENDER ========================
 
 	render() {
 		return (
