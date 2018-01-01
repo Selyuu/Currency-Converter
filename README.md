@@ -17,6 +17,7 @@ To get acquainted further with React Native as I transition my learning from Rea
 - Expo
 
 **Misc:**
+- Fixer.io API
 - React Extended Stylesheets
 - React Native Dropdown Alert
 - Redux Logger
