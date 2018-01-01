@@ -9,7 +9,7 @@ import { ClearButton } from '../components/Buttons';
 import { LastConverted } from '../components/Text';
 import { Header } from '../components/Header';
 
-// Actions REDUX
+// REDUX
 import { swapCurrency, changeCurrencyAmount, getInitial } from '../actions/currencies';
 import { connect } from 'react-redux';
 
@@ -112,7 +112,7 @@ const mapStateToProps = (state) => {
 		amount: state.currencies.amount,
 		conversionRate: rates[quoteCurrency] || 0,
 		isFetching: conversionSelector.isFetching,
-		lastConvertedDate: conversionSelector.date ? new Date(conversionSelector.date) : new Date(),
+		lastConvertedDate: conversionSelector.date ? new Date() : new Date(),
 		primaryColor: state.theme.primaryColor,
 	}
 }

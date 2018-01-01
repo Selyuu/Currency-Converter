@@ -9,7 +9,7 @@ const sagaMiddleware = createSagaMiddleware();
 
 const middleware = [sagaMiddleware];
 
-// logger always last
+// logger always las
 if (process.env.NODE_ENV === 'development') middleware.push(logger);
 
 const store = createStore(reducers, applyMiddleware(...middleware));
