@@ -10,7 +10,7 @@ import { LastConverted } from '../components/Text';
 import { Header } from '../components/Header';
 
 // Actions REDUX
-import { swapCurrency, changeCurrencyAmount } from '../actions/currencies';
+import { swapCurrency, changeCurrencyAmount, getInitial } from '../actions/currencies';
 import { connect } from 'react-redux';
 
 class Home extends Component {
@@ -25,6 +25,10 @@ class Home extends Component {
 		isFetching: PropTypes.bool,
 		lastConvertedDate: PropTypes.object,
 		primaryColor: PropTypes.string,
+	}
+
+	componentWillMount() {
+		this.props.dispatch(getInitial());
 	}
 
 	pressBase = () => {
